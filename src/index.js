@@ -3,14 +3,12 @@ import ReactDOM from "react-dom";
 
 import "./styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
-}
+const HelloWorld = () => <h1>Higher Order Components</h1>;
+const Button = () => <button className="btn btn-primary">Press Button</button>;
+
+const App = () => {
+  return [<HelloWorld key="1" />, <Button key="2" />];
+};
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
